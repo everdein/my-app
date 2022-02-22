@@ -1,5 +1,9 @@
 .centered {
-    display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+}
+
+.dogs-text {
+    text-align: center;
+    border-color: red;
+    border-style: dashed;
 }

@@ -1,0 +1,10 @@
+.footer {
+    background-color: black;
+    font-family: Verdana;
+}
+
+.footer-text {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}

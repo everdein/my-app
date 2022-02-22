@@ -7,7 +7,8 @@ import { connect } from "react-redux";
 import { extractPayloadFromURL } from "../helpers/helpers";
 import Dogs from "../components/Dogs";
 import "./styles/App.css";
-
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 export class App extends Component {
 
   componentDidMount() {
@@ -18,9 +19,11 @@ export class App extends Component {
 
     let dogsInfo = <Dogs/>
 
-    return(
+    return (
       <div className="centered">
-        {dogsInfo}
+        <div className=""><Header/></div>
+        <div className="dogs-text">{dogsInfo}</div>
+        <div className=""><Footer/></div>
       </div>
     )
   }

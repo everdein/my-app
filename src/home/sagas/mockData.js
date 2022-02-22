@@ -3,7 +3,7 @@ const mockData = {
         "dogs": [
             {
                 "name": "Samson",
-                "age": "12",
+                "age": "14",
                 "color": "brown",
             },
             {

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { getDogsInformation } from "../selectors/DogsSelectors";
 import propTypes from "prop-types";
 import { connect } from "react-redux";
+import "./styles/dogs.css"
 
 export class Dogs extends Component {
     
