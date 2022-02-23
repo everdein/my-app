@@ -5,10 +5,11 @@ import { bindActionCreators } from "redux";
 import propTypes from "prop-types";
 import { connect } from "react-redux";
 import { extractPayloadFromURL } from "../helpers/helpers";
-import Dogs from "../components/Dogs";
 import "./styles/App.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Card from "../components/DogsCard";
+
 export class App extends Component {
 
   componentDidMount() {
@@ -16,14 +17,12 @@ export class App extends Component {
   }
 
   render() {
-
-    let dogsInfo = <Dogs/>
-
+    let dogsCardInfo = <Card dogsInfo={this.props.dogsInfo}/>
     return (
-      <div className="centered">
-        <div className=""><Header/></div>
-        <div className="dogs-text">{dogsInfo}</div>
-        <div className=""><Footer/></div>
+      <div>
+        <div><Header/></div>
+        <div>{dogsCardInfo}</div>
+        <div><Footer/></div>
       </div>
     )
   }
@@ -41,6 +40,7 @@ const mapDispatchToProps = (dispatch) =>
 App.propTypes = {
   requestPageData: propTypes.func.isRequired,
   dogsInfo: propTypes.array,
+  dogsCardInfo: propTypes.object,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
