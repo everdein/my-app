@@ -1,13 +1,10 @@
 .header {
     background-color: black;
     font-family: Verdana;
-    font: 100px;
-    padding:0%;
-    margin:0%;
+    height: auto;
 }
 
-.header-text {
+.header-header {
     color: white;
-    font-size: 50px;
     text-align: center;
 }

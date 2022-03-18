@@ -19,7 +19,7 @@ export class App extends Component {
   render() {
     let dogsCardInfo = <Card dogsInfo={this.props.dogsInfo}/>
     return (
-      <div>
+      <div className="container">
         <div><Header/></div>
         <div>{dogsCardInfo}</div>
         <div><Footer/></div>

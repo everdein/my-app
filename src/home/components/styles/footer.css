@@ -1,10 +1,33 @@
-.footer {
+.footer-container {
     background-color: black;
     font-family: Verdana;
+    height: auto;
 }
 
-.footer-text {
-    color: white;
-    font-size: 20px;
+.footer-header {
+    color: rgb(175, 16, 16);
     text-align: center;
+    font-size: 12px;
+    padding: 10px;
+    /* font-weight: bold; */
 }
+
+.footer-table {
+    color: rgb(160, 154, 154);
+    font-family: Verdana;
+    font-size: 6px;
+    text-align: center;
+    width: 100%;
+}
+
+.fancy-link {
+    color: rgb(92, 87, 87);
+    text-decoration: none;
+    transition: color 0.3s linear;
+    -webkit-transition: color 0.3s linear;
+    -moz-transition: color 0.3s linear;
+ }
+ 
+ .fancy-link:hover {
+    color: rgb(175, 16, 16);
+ }

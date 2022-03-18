@@ -25,7 +25,6 @@ export class Dogs extends Component {
                             </div> 
                         : ""}
                     </div>
-
         return <div>{dog}</div>;
     }
 }
