@@ -8,7 +8,7 @@ const mockData = {
             },
             {
                 "name": "Bukowski",
-                "age": "11",
+                "age": "12",
                 "color": "white",
             },
         ],

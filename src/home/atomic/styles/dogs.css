@@ -1,7 +1,8 @@
 .dogs-table {
     margin-left: auto;
     margin-right: auto;
-    font-weight: 100;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-weight: 100; */
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     width: 100%;
 }
