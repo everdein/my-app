@@ -6,3 +6,7 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     width: 100%;
 }
+
+.dogs-table td {
+    vertical-align: top;
+}

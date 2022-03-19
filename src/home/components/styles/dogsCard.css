@@ -1,6 +1,6 @@
 .card-container {
     height: auto;
-    width: 150px;
+    width: 153px;
     border-style: solid;
     border-color: black;
     border-width: 1px;
@@ -10,9 +10,9 @@
 }
 
 .card-container:hover {
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.5),
-    10px 10px 15px rgba(0,0,0,0.5),
-    -1px -1px 30px rgba(0,0,0,0.2);
+    box-shadow: 2px 2px 5px rgba(150, 141, 141, 0.5),
+    10px 10px 10px rgba(0,0,0,0.5),
+    -1px -1px 10px rgba(0,0,0,0.2);
 }
 
 .card-header {

@@ -5,3 +5,4 @@ export const RECEIVE_PAGE_DATA = "RECEIVE_PAGE_DATA";
 /** Dogs **/
 export const AGE = "Age:";
 export const COAT = "Coat:";
+export const BREED = "Breed:";

@@ -9,6 +9,7 @@ import "./styles/App.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Card from "../components/DogsCard";
+import { Route } from "react-router-dom";
 
 export class App extends Component {
 
@@ -17,7 +18,7 @@ export class App extends Component {
   }
 
   render() {
-    let dogsCardInfo = <Card dogsInfo={this.props.dogsInfo}/>
+    let dogsCardInfo = <Card dogsInfo={this.props.dogsInfo}/>;
     return (
       <div className="container">
         <div><Header/></div>

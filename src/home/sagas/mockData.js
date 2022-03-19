@@ -4,12 +4,14 @@ const mockData = {
             {
                 "name": "Samson",
                 "age": "14",
-                "color": "brown",
+                "color": "Brown",
+                "breed": "Chihuahua",
             },
             {
                 "name": "Bukowski",
                 "age": "12",
-                "color": "white",
+                "color": "White",
+                "breed": "Mini American Eskimo"
             },
         ],
     },

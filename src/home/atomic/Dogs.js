@@ -20,6 +20,10 @@ export class Dogs extends Component {
                                             <td>{this.props.dogsInfo[this.props.dog].color && types.COAT}</td>
                                             <td>{this.props.dogsInfo[this.props.dog].color && this.props.dogsInfo[this.props.dog].color}</td>
                                         </tr>
+                                        <tr>
+                                            <td>{this.props.dogsInfo[this.props.dog].breed && types.BREED}</td>
+                                            <td>{this.props.dogsInfo[this.props.dog].breed && this.props.dogsInfo[this.props.dog].breed}</td>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div> 
