@@ -9,7 +9,7 @@ import "./styles/App.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Card from "../components/DogsCard";
-import { Route } from "react-router-dom";
+import AppContainer from "./AppContainer";
 
 export class App extends Component {
 
@@ -22,6 +22,7 @@ export class App extends Component {
     return (
       <div className="container">
         <div><Header/></div>
+        <AppContainer/>
         <div>{dogsCardInfo}</div>
         <div><Footer/></div>
       </div>
