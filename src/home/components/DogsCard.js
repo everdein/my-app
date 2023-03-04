@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./styles/dogsCard.css";
-import Dogs from "../atomic/Dogs";
+import Dogs from "./Dogs";
 import propTypes from "prop-types";
 import samson from "../components/images/samson.jpg";
 import bukowski from "../components/images/bukowski.jpg"

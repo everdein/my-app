@@ -1,38 +1,36 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import propTypes from "prop-types";
-import { connect } from 'react-redux';
-import * as contactAction from '../actions/contactActions';
-
+import { connect } from "react-redux";
+import * as contactAction from "../actions/contactActions";
 
 class AppContainer extends Component {
-
-  constructor(props){
+  constructor(props) {
     super(props);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.state = {
       name: "",
-    }
+    };
   }
 
-  handleChange(e){
+  handleChange(e) {
     this.setState({
-      name: e.target.value
-    })
+      name: e.target.value,
+    });
   }
 
-  handleSubmit(e){
+  handleSubmit(e) {
     e.preventDefault();
     let contact = {
-      name: this.state.name
-    }
+      name: this.state.name,
+    };
     this.setState({
       name: "",
     });
     this.props.createContact(contact);
   }
 
-  listView(data, index){
+  listView(data, index) {
     return (
       <div className="row">
         <div className="col-md-10">
@@ -41,58 +39,66 @@ class AppContainer extends Component {
           </li>
         </div>
         <div className="col-md-2">
-          <button onClick={(e) => this.deleteContact(e, index)} className="btn btn-danger">
+          <button
+            onClick={(e) => this.deleteContact(e, index)}
+            className="btn btn-danger"
+          >
             Remove
           </button>
         </div>
-    </div> 
-    )
+      </div>
+    );
   }
 
-  deleteContact(e, index){
+  deleteContact(e, index) {
     e.preventDefault();
     this.props.deleteContact(index);
   }
 
   render() {
-
-    return(
+    return (
       <div className="container">
         <h1>Clientside Contacts Application</h1>
-        <hr />
+        <hr/>
         <div>
           <h3>Add Contact Form</h3>
           <form onSubmit={this.handleSubmit}>
-            <input type="text" onChange={this.handleChange} className="form-control" value={this.state.name}/><br />
+            <input
+              type="text"
+              onChange={this.handleChange}
+              className="form-control"
+              value={this.state.name}
+           />
+            <br/>
             <input type="submit" className="btn btn-success" value="Add"/>
           </form>
-          <hr />
-        <div className="list-group">
-          {this.props.contacts.map((contact, i) => this.listView(contact, i))}
-        </div>
+          <hr/>
+          <div className="list-group">
+            {this.props.contacts.map((contact, i) => this.listView(contact, i))}
+          </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
 const mapStateToProps = (state, ownProps) => {
   return {
     contacts: state.contacts,
-  }
+  };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    createContact: contact => dispatch(contactAction.createContact(contact)),
-    deleteContact: index => dispatch(contactAction.deleteContact(index)),
-  }
+    createContact: (contact) => dispatch(contactAction.createContact(contact)),
+    deleteContact: (index) => dispatch(contactAction.deleteContact(index)),
+  };
 };
 
 AppContainer.propTypes = {
-    createContact: propTypes.func,
-    deleteContact: propTypes.func,
-    contacts: propTypes.array,
-}
+  createContact: propTypes.func,
+  deleteContact: propTypes.func,
+  contacts: propTypes.array,
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(AppContainer);

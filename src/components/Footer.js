@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./styles/footer.css";
-import pdf from "../atomic/resume.pdf";
+import pdf from "../docs/resume.pdf";
 
 export class Footer extends Component {
     render() {

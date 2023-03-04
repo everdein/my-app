@@ -1,6 +1,6 @@
 import { call, put, all, takeEvery } from "redux-saga/effects";
-import * as types from "../constants/constants";
-import { receivePageData } from "../actions/apiActions";
+import * as types from "../home/constants/constants";
+import { receivePageData } from "../home/actions/apiActions";
 import mockData from "./mockData";
 
 function* getPageData(action) {
