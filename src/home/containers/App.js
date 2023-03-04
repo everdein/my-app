@@ -1,53 +1,51 @@
 import React, { Component } from "react";
 import { requestPageData } from "../actions/apiActions";
 import { getDogsInformation } from "../selectors/DogsSelectors";
-import { bindActionCreators } from "redux";
-import propTypes from "prop-types";
 import { connect } from "react-redux";
 import { extractPayloadFromURL } from "../../helpers/helpers";
-import "./styles/App.css";
 import Header from "../../components/Header";
+import ClientContacts from "../components/ClientContacts";
+import Dogs from "../components/Dogs";
 import Footer from "../../components/Footer";
-import Card from "../components/DogsCard";
-import AppContainer from "./AppContainer";
+import propTypes from "prop-types";
+import "./styles/App.css";
 
 export class App extends Component {
-  componentDidMount() {
-    this.props.requestPageData(extractPayloadFromURL());
-  }
+	
+	constructor(props) {
+		super(props);
+	}
 
-  render() {
-    return (
-      <div className="container">
-        <div>
-          <Header/>
-        </div>
-        <AppContainer/>
-        <Card dogsInfo={this.props.dogsInfo}/>
-        <div>
-          <Footer/>
-        </div>
-      </div>
-    );
-  }
+	componentDidMount() {
+		this.props.requestPageData(extractPayloadFromURL());
+	}
+
+	render() {
+		return (
+			<div className="container">
+				<Header/>
+				<ClientContacts/>
+				<Dogs/>
+				<Footer/>
+			</div>
+		);
+	}
 }
 
 const mapStateToProps = (state) => ({
-  dogsInfo: getDogsInformation(state),
+	dogsInfo: getDogsInformation(state),
 });
 
-const mapDispatchToProps = (dispatch) =>
-  bindActionCreators(
-    {
-      requestPageData,
-    },
-    dispatch
-  );
+const mapDispatchToProps = (dispatch) => {
+	return {
+		requestPageData: (payload) => dispatch(requestPageData(payload)),
+	}
+};
 
 App.propTypes = {
-  requestPageData: propTypes.func.isRequired,
-  dogsInfo: propTypes.array,
-  dogsCardInfo: propTypes.object,
+	requestPageData: propTypes.func.isRequired,
+	dogsInfo: propTypes.array,
+	dogsCardInfo: propTypes.object,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

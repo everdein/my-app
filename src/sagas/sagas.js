@@ -1,4 +1,4 @@
-import { call, put, all, takeEvery } from "redux-saga/effects";
+import { put, all, takeEvery } from "redux-saga/effects";
 import * as types from "../home/constants/constants";
 import { receivePageData } from "../home/actions/apiActions";
 import mockData from "./mockData";
@@ -7,7 +7,6 @@ function* getPageData(action) {
     try {
         const data = [];
         data.data = mockData;
-        // console.log(data.data);
         yield put(receivePageData(data));
     } catch (e) {
         console.log(e);

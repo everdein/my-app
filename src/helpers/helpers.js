@@ -1,4 +1,4 @@
-export const extractPayloadFromURL = (externalRef) => {
-    let payload = {externalRef};
+export const extractPayloadFromURL = () => {
+    let payload;
     return payload;
 };

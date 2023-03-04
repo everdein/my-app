@@ -1,12 +1,14 @@
-.card-container {
+.dog-card-container {
     height: auto;
-    width: 153px;
+    width: 200px;
     border-style: solid;
     border-color: black;
     border-width: 1px;
     border-radius: 5px;
     padding: 5px;
     margin: 10px;
+    flex-wrap: wrap;
+    display: inline-block;
 }
 
 .card-container:hover {

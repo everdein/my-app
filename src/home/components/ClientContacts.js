@@ -57,7 +57,7 @@ class AppContainer extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div>
         <h1>Clientside Contacts Application</h1>
         <hr/>
         <div>
