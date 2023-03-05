@@ -3,15 +3,17 @@ const mockData = {
         "dogs": [
             {
                 "name": "Samson",
-                "age": "14",
-                "color": "Brown",
+                "age": "16",
+                "coat": "Brown",
                 "breed": "Chihuahua",
+                "id": 100,
             },
             {
                 "name": "Bukowski",
-                "age": "12",
-                "color": "White",
-                "breed": "Mini American Eskimo"
+                "age": "14",
+                "coat": "White",
+                "breed": "Mini American Eskimo",
+                "id": 101,
             },
         ],
     },

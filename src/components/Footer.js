@@ -6,7 +6,6 @@ export class Footer extends Component {
     render() {
         return(
             <div className="footer-container">
-                <header className="footer-header">Matthew Clark: A Front-End Developer on a Mission</header>
                 <div className="table-center">
                     <table className="footer-table">
                         <tbody>
@@ -34,12 +33,6 @@ export class Footer extends Component {
                                 <td></td>
                                 <td></td>
                             </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>                            
                         </tbody>
                     </table>
                 </div>

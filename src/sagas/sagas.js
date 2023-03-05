@@ -1,5 +1,5 @@
 import { put, all, takeEvery } from "redux-saga/effects";
-import * as types from "../home/constants/constants";
+import * as types from "../home/constants/apiConstants";
 import { receivePageData } from "../home/actions/apiActions";
 import mockData from "./mockData";
 

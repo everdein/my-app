@@ -1,0 +1,67 @@
+.dog-card-container {
+  height: auto;
+  width: 200px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px;
+  text-align: center;
+  display: inline-block;
+}
+
+.dog-card-container:hover {
+  box-shadow: 2px 2px 5px rgba(150, 141, 141, 0.5),
+    10px 10px 10px rgba(0, 0, 0, 0.5), -1px -1px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dog-card-header {
+  font-size: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.dog-image {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5%;
+  border-style: solid;
+}
+
+.dogs-table {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 12px;
+  font-family: Verdana;
+  width: 100%;
+}
+
+.add-your-kanine {
+  font-family: Verdana;
+}
+
+.table-center {
+  font-family: Verdana;
+  flex-wrap: wrap;
+  display: inline-block;
+  font-style: verdana;
+  text-align: left;
+}
+
+.add-button {
+  font-family: Verdana;
+  width: 230px;
+}
+
+.file-container {
+  width: 90px;
+}
+
+body {
+    text-align: center;
+}
+
+.wrap {
+    display: inline-block;
+    overflow: hidden;
+}

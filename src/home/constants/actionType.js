@@ -1,3 +1,2 @@
-export const GET_ALL_CONTACTS = 'GET_ALL_CONTACTS';
-export const CREATE_NEW_CONTACT = 'CREATE_NEW_CONTACT';
-export const REMOVE_CONTACT = 'REMOVE_CONTACT';
+export const CREATE_DOG = "CREATE_DOG";
+export const REMOVE_DOG = "REMOVE_DOG";

@@ -4,8 +4,7 @@ import { getDogsInformation } from "../selectors/DogsSelectors";
 import { connect } from "react-redux";
 import { extractPayloadFromURL } from "../../helpers/helpers";
 import Header from "../../components/Header";
-import ClientContacts from "../components/ClientContacts";
-import Dogs from "../components/Dogs";
+import ListDogs from "../components/dogs/ListDogs";
 import Footer from "../../components/Footer";
 import propTypes from "prop-types";
 import "./styles/App.css";
@@ -22,10 +21,9 @@ export class App extends Component {
 
 	render() {
 		return (
-			<div className="container">
+			<div>
 				<Header/>
-				<ClientContacts/>
-				<Dogs/>
+				<ListDogs/>
 				<Footer/>
 			</div>
 		);
