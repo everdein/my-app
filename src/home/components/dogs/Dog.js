@@ -30,13 +30,13 @@ export class Dog extends Component {
 
     render() {
         return(
-            <div className="dog-card-container dog-card-container horizontal-list">
+            <div className="dog-card-container">
                 {this.props.dogInfo.name && <header className="dog-card-header">{this.props.dogInfo.name}</header>}
                 {this.switchDog(this.props.dogInfo.name) !== "" && <img src={this.switchDog(this.props.dogInfo.name)} alt="" width="150" height="150" className="dog-image"/>}
 
                 {this.props.dogInfo.image && <img src={this.props.dogInfo.image} alt="" width="150" height="150" className="dog-image"/>}
 
-                <table className="dogs-table">
+                <table className="dog-table">
                     <tbody>
                         <tr>
                             <td>{this.props.dogInfo.age && types.AGE}</td>
@@ -52,7 +52,7 @@ export class Dog extends Component {
                         </tr>
                     </tbody>
                 </table>
-                <button onClick={(e) => this.deleteContact(e, this.props.index)} className="btn btn-danger">Remove</button>
+                <button onClick={(e) => this.deleteContact(e, this.props.index)}>Remove</button>
             </div> 
         );
     }

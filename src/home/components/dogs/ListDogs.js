@@ -126,7 +126,7 @@ class ListDogs extends Component {
 						<input type="submit" className="add-button button1" value="Add" disabled={this.state.isAddButtonDisabled}/>
 					</div>
 				</form>
-				<div className="">{this.props.getDogsInfo.map((contact, i) => this.listView(contact, i))}</div>
+				<div>{this.props.getDogsInfo.map((contact, i) => this.listView(contact, i))}</div>
 			</div>
 		);
 	}
