@@ -1,6 +1,6 @@
-export const getDogsInformation = (state) => {
+export const dogsSelector = (state) => {
     try {
-        return state.AnimalsInformation.animals.dogs;
+        return state.DogsSlice.dogs;
     } catch (e) {
         return null;
     }

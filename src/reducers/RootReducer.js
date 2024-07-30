@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
-import AnimalsInformation from "../home/reducers/APIReducer";
+import DogsSlice from "../home/reducers/DogsReducer";
 
 export default combineReducers({
-    AnimalsInformation,
+    DogsSlice,
 });
