@@ -13,7 +13,7 @@ export class Dog extends Component {
     }
 
     switchDog(dog) {
-        switch(dog) {
+        switch (dog) {
             case "Samson":
                 return Samson;
             case "Bukowski":
@@ -24,17 +24,17 @@ export class Dog extends Component {
     }
 
     deleteContact(e, index) {
-		e.preventDefault();
-		this.props.removeDog(this.props.dogInfo.id);
-	}
+        e.preventDefault();
+        this.props.removeDog(this.props.dogInfo.id);
+    }
 
     render() {
-        return(
+        return (
             <div className="dog-card-container">
                 {this.props.dogInfo.name && <header className="dog-card-header">{this.props.dogInfo.name}</header>}
-                {this.switchDog(this.props.dogInfo.name) !== "" && <img src={this.switchDog(this.props.dogInfo.name)} alt="" width="150" height="150" className="dog-image"/>}
+                {this.switchDog(this.props.dogInfo.name) !== "" && <img src={this.switchDog(this.props.dogInfo.name)} alt="" width="150" height="150" className="dog-image" />}
 
-                {this.props.dogInfo.image && <img src={this.props.dogInfo.image} alt="" width="150" height="150" className="dog-image"/>}
+                {this.props.dogInfo.image && <img src={this.props.dogInfo.image} alt="" width="150" height="150" className="dog-image" />}
 
                 <table className="dog-table">
                     <tbody>
@@ -53,7 +53,7 @@ export class Dog extends Component {
                     </tbody>
                 </table>
                 <button onClick={(e) => this.deleteContact(e, this.props.index)}>Remove</button>
-            </div> 
+            </div>
         );
     }
 }
@@ -62,14 +62,13 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => {
-	return {
-		removeDog: (index) => dispatch(removeDog(index)),
-	};
+    return {
+        removeDog: (index) => dispatch(removeDog(index)),
+    };
 };
 
 Dog.propTypes = {
     removeDog: propTypes.func,
-    // index: propTypes.number,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Dog);

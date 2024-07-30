@@ -3,7 +3,7 @@ import "./styles/header.css";
 
 export class Header extends Component {
     render() {
-        return(
+        return (
             <div className="header"><header className="header-header">Enter Dog Here</header></div>
         );
     }

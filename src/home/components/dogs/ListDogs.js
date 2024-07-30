@@ -27,23 +27,23 @@ class ListDogs extends Component {
 		}
 	}
 
-	handleName = e => { 
-		this.setState({name: e.target.value }); 
+	handleName = e => {
+		this.setState({ name: e.target.value });
 		this.validation.name = true;
 		this.handleValidation();
 	}
-	handleAge = e => { 
-		this.setState({age: e.target.value }); 
+	handleAge = e => {
+		this.setState({ age: e.target.value });
 		this.validation.age = true;
 		this.handleValidation();
 	}
-	handleCoat = e => { 
-		this.setState({coat: e.target.value }); 
+	handleCoat = e => {
+		this.setState({ coat: e.target.value });
 		this.validation.coat = true;
 		this.handleValidation();
 	}
-	handleBreed = e => { 
-		this.setState({breed: e.target.value }); 
+	handleBreed = e => {
+		this.setState({ breed: e.target.value });
 		this.validation.breed = true;
 		this.handleValidation();
 	}
@@ -58,7 +58,7 @@ class ListDogs extends Component {
 	};
 
 	handleValidation() {
-		if(this.validation.name === true && this.validation.age === true && this.validation.coat === true && this.validation.breed === true && this.validation.image === true) {
+		if (this.validation.name === true && this.validation.age === true && this.validation.coat === true && this.validation.breed === true && this.validation.image === true) {
 			this.setState({ isAddButtonDisabled: false });
 		}
 	}
@@ -87,12 +87,12 @@ class ListDogs extends Component {
 
 	listView(props, index) {
 		return (
-			<div className="body wrap" key={index}><Dog dogInfo={props} index={index}/></div>
+			<div className="body wrap" key={index}><Dog dogInfo={props} index={index} /></div>
 		);
 	}
 
 	render() {
-		return(
+		return (
 			<div>
 				<br></br>
 				<form onSubmit={this.handleSubmit}>
@@ -101,29 +101,29 @@ class ListDogs extends Component {
 							<tbody>
 								<tr>
 									<td><label>Name:</label></td>
-									<td><input type="text" onChange={this.handleName} className="form-control" value={this.state.name}/></td>
+									<td><input type="text" onChange={this.handleName} className="form-control" value={this.state.name} /></td>
 								</tr>
 								<tr>
 									<td><label>Age:</label></td>
-									<td><input type="text" onChange={this.handleAge} className="form-control" value={this.state.age}/></td>
+									<td><input type="text" onChange={this.handleAge} className="form-control" value={this.state.age} /></td>
 								</tr>
 								<tr>
 									<td><label>Coat:</label></td>
-									<td><input type="text" onChange={this.handleCoat} className="form-control" value={this.state.coat}/></td>
+									<td><input type="text" onChange={this.handleCoat} className="form-control" value={this.state.coat} /></td>
 								</tr>
 								<tr>
 									<td><label>Breed:</label></td>
-									<td><input type="text" onChange={this.handleBreed} className="form-control" value={this.state.breed}/></td>
+									<td><input type="text" onChange={this.handleBreed} className="form-control" value={this.state.breed} /></td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 					<div className="body">
-						{this.state.image && <img src={this.state.image} alt="" width="150" height="150" className="dog-image"/>}
+						{this.state.image && <img src={this.state.image} alt="" width="150" height="150" className="dog-image" />}
 						<br></br>
-						<input type="file" name="myImage" className="file-container" onChange={this.handleImage}/>
+						<input type="file" name="myImage" className="file-container" onChange={this.handleImage} />
 						<br></br><br></br>
-						<input type="submit" className="add-button button1" value="Add" disabled={this.state.isAddButtonDisabled}/>
+						<input type="submit" className="add-button button1" value="Add" disabled={this.state.isAddButtonDisabled} />
 					</div>
 				</form>
 				<div>{this.props.getDogsInfo.map((contact, i) => this.listView(contact, i))}</div>

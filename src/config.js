@@ -5,16 +5,14 @@ class config {
         this.animalsApi = "";
     }
 
-    register() {
-        return axios
-            .get("/assets/env.json")
-            .then((result) => {
-                this.animalsApi = result.data.urls.animalsApi;
-                return Promise.resolve();
-            })
-            .catch((error) => {
-                console.log(error);
-            });
+    async register() {
+        try {
+            const result = await axios.get("/assets/env.json");
+            this.animalsApi = result.data.urls.animalsApi;
+            return await Promise.resolve();
+        } catch (error) {
+            console.log(error);
+        }
     }
 }
 

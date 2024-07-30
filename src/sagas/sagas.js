@@ -17,7 +17,6 @@ export function* requestPageDataSaga() {
     yield takeEvery(types.REQUEST_PAGE_DATA, getPageData);
 }
 
-
 export default function* rootSaga() {
     yield all([requestPageDataSaga()]);
 }

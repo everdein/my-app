@@ -10,7 +10,7 @@ import propTypes from "prop-types";
 import "./styles/App.css";
 
 export class App extends Component {
-	
+
 	constructor(props) {
 		super(props);
 	}
@@ -22,9 +22,9 @@ export class App extends Component {
 	render() {
 		return (
 			<div>
-				<Header/>
-				<ListDogs/>
-				<Footer/>
+				<Header />
+				<ListDogs />
+				<Footer />
 			</div>
 		);
 	}

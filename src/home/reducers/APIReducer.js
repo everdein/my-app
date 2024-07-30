@@ -22,7 +22,7 @@ export default (state = initialState, action) => {
 
 		case actionTypes.REMOVE_DOG:
 			var removeDogNewState = { ...state };
-			if(removeDogNewState.animals.dogs !== null)
+			if (removeDogNewState.animals.dogs !== null)
 				removeDogNewState.animals.dogs = removeDogNewState.animals.dogs.filter(dog => dog.id !== action.id)
 
 			return removeDogNewState;

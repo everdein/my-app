@@ -4,7 +4,7 @@ import pdf from "../docs/resume.pdf";
 
 export class Footer extends Component {
     render() {
-        return(
+        return (
             <div className="footer-container">
                 <div className="table-center">
                     <table className="footer-table">
