@@ -5,6 +5,7 @@ import { receivePageData } from "../home/actions/actions";
 // import mockData from "./mockData";
 
 function* getPageData(action) {
+    // Mock data
     // try {
     // const data = [];
     // data.data = mockData;
@@ -15,9 +16,8 @@ function* getPageData(action) {
 
     try {
         let url = "http://localhost:8080/";
-        // let url = "";
         const data = yield call(apiCall, url);
-        // yield put(receivePageData(data));
+        yield put(receivePageData(data));
     } catch (e) {
         console.log(e);
     }
@@ -32,7 +32,7 @@ export function* apiCall(url) {
         method: "GET",
         url: url,
         headers: {
-            // "Access-Control-Allow-Headers": "Content-Type",
+            "Access-Control-Allow-Headers": "Content-Type",
             // "Access-Control-Allow-Origin": "*",
             // "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, PATCH, OPTIONS",
             // "Access-Control-Allow-Methods": "GET",

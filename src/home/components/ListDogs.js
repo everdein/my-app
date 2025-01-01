@@ -93,6 +93,8 @@ function ListDogs(props) {
 		setId(id + 1);
 	}
 
+	console.log(props.dogs);
+
 	return (
 		<div>
 			<br></br>

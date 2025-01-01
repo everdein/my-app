@@ -8,7 +8,7 @@ export default (state = initialState, action) => {
 	switch (action.type) {
 		case types.RECEIVE_PAGE_DATA:
 			var newState = { ...state };
-			newState.dogs = action.payload.data.dogs;
+			newState.dogs = action.payload.data;
 			return newState;
 
 		case types.CREATE_DOG:
